@@ -1,0 +1,461 @@
+*,*::before,::after{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+
+}
+:root{
+    --gray: hsla(198, 28%, 93%, 1);
+    --dark-blue:hsla(220, 50%, 17%, 1);
+    --light-blue: hsla(221, 23%, 58%, 1);
+    --orange:rgb(255, 111, 27);
+    --white: hsla(0, 0%, 100%, 1);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    line-height: 1.5rem;
+}
+span{
+    font-size: 1em;
+    color: var(--light-blue);
+    font-weight: 800;
+}
+.page-container{
+    width: 80%;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4% 0;
+}
+header .pre-order-btn{
+    background-color: var(--gray);
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+header .pre-order-btn a{
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.keyboard-section{
+    display: grid;
+    grid-gap: 1rem;
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "box-one box-one box-one box-two box-two box-two"
+    "box-three box-four box-four box-four box-five box-five";
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+.pg-info.box-one{
+    grid-area: box-one;
+}
+.keyboard-img.box-two{
+    grid-area: box-two;
+}
+.orange-keyboard.box-three{
+    grid-area: box-three;
+}
+.water-keyboard.box-four{
+    grid-area: box-four;
+}
+.wireless-keyboard.box-five{
+    grid-area: box-five;
+    
+}
+.pg-info{
+    margin-bottom: 1rem;
+    width: 90%;
+    margin-right: auto;
+}
+.pg-info h1{
+    font-weight: 900;
+    font-size: 2rem;
+    word-wrap: break-word;
+    color: var(--dark-blue);
+    margin-bottom: .5rem;
+    line-height: 2.2rem;
+}
+.pg-info p{
+    font-size: 15px;
+    color: var(--light-blue);
+    margin-bottom: 1rem;
+}
+.order-now-btn{
+    display: flex;
+    align-items: center;
+}
+.order-now-btn .one{
+    padding: 10px 12px;
+    background-color: var(--orange);
+    font-size: .8em;
+    font-weight: bolder;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5%;
+}
+.order-now-btn .two{
+    font-size: .8em;
+    font-weight: bold;
+}
+.keyboard-img{
+    position: relative;
+    object-fit: cover;
+}
+.keyboard-img::before{
+    content: '';
+    position: absolute;
+    height: 15vw;
+    width: 20%;
+    top: 0;
+    right: -9.85vw;
+    background-color: var(--gray);
+    border-radius: 1em 0em 0em 1em;
+    opacity: .8;
+}
+.keyboard-img picture img{
+    border-radius: 1em;
+    height: 30vw;
+}
+.orange-keyboard{
+ position: relative;
+}
+.orange-keyboard img{
+    object-fit: fill;
+    height: 30vw;
+    object-position: 100%;
+    border-radius: 1em;
+}
+.orange-keyboard::before{
+    content: '';
+    position: absolute;
+    height: 15vw;
+    width: 70%;
+    top: 50%;
+    left: -10vw;
+    background-color: var(--gray);
+    border-radius: 0 1em 1em 0;
+    opacity: .8;
+}
+.orange-keyboard::after{
+    content: '';
+    position: absolute;
+    height: 30vw;
+    width: 100%;
+    background-color: var(--orange);
+    left: 0;
+    border-radius: 1em;
+    opacity: .8;
+}
+.water-keyboard img{
+    object-fit: cover;
+    height: 30vw;
+    object-position: 100%;
+    border-radius: 1em;
+
+}
+.wireless-keyboard{
+    width: 80%;
+    margin-left: auto;
+}
+.wireless-keyboard .title{
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    line-height: 2.1rem;
+    margin-bottom: 5%;
+}
+.wireless-keyboard .summary{
+    font-size: 15px;
+    color: var(--light-blue);
+}
+.keyboard-features{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "fone ftwo fthree ffour";
+    grid-gap: 1rem;
+    margin:10% 0 ;
+}
+.feature.fone{
+    grid-area: fone;
+}
+.feature.ftwo{
+    grid-area: ftwo;
+}
+.feature.fthree{
+    grid-area: fthree;
+}
+.feature.ffour{
+    grid-area: ffour;
+}
+.feature{
+    width: auto;
+}
+.feature .icon{
+    background-color: var(--orange);
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 10px;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: fill;
+    margin-bottom: 1rem;
+} 
+
+.feature .icon img{
+    width: 90%;
+    height: 90%;
+}
+.feature .title{
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.feature .summary{
+    font-size: 1em;
+    color: var(--light-blue);
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-blue);
+    padding-bottom: 2%;
+}
+
+@media(max-width: 768px) {
+    .page-container{
+        width: 100%;
+        padding: 0 3%;
+    }
+    .keyboard-section{
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "box-one box-one box-two box-two"
+        "box-three box-four box-four box-four"
+        "box-five box-five box-five box-five";
+        grid-gap: 1.5rem;
+        justify-content: space-between;
+        margin-bottom: 10%;
+    }
+    .pg-info{
+        margin-bottom: 1rem;
+        width: auto;
+        margin-right: auto;
+    }
+    .pg-info h1{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .order-now-btn .one{
+        padding: 8px 10px;
+        font-size: .6em;
+        font-weight: bolder;
+    }
+    .order-now-btn .two{
+        font-size: .6em;
+        font-weight: bolder;
+    }
+    .keyboard-img{
+        position: relative;
+        object-fit: cover;
+    }
+    .keyboard-img picture img{
+        border-radius: 1em 0 0 1em;
+        position: relative;
+        right: -5%;
+        width: 100%;
+        height: auto;
+        max-height: 40vw;
+        object-fit: cover;
+    }
+    .orange-keyboard img,
+    .water-keyboard img{
+        width: 100%;
+        border-radius: 1em;
+        height: auto;
+        max-height: 40vw;
+        object-fit: cover;
+    }
+    .keyboard-img::before{
+        display: none;
+    }
+    .orange-keyboard::before{
+        display: none;
+    }
+    .orange-keyboard::after{
+        height: 100%;
+    }
+    .wireless-keyboard{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 4fr);
+        grid-template-areas: "one two two two";
+    }
+    .wireless-keyboard .title{
+        font-size: 1.5em;
+        line-height: 1.5rem;
+    }
+    .wireless-keyboard .title.one{
+        grid-area: one;
+    }
+    .wireless-keyboard .summary.two{
+        grid-area: two;
+        width: 90%;
+        margin-left: auto;
+    }
+    .keyboard-features{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "fone ftwo "
+        "fthree ffour";
+        grid-gap: 8%;
+        padding-bottom: 10%;
+    }
+}
+@media(max-width: 426px){
+    .page-container{
+        width: 100%;
+    }
+    header .logo{
+        width: auto;
+    }
+    header .pre-order-btn{
+        padding: 6px 8px;
+    }
+    header .pre-order-btn a{
+        font-size: 12px;
+    }
+    .keyboard-section{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "box-one box-one box-one"
+        "box-two box-two box-two"
+        "box-three box-four box-four"
+        "box-five box-five box-five";
+        grid-gap: 5px;
+    }
+    .pg-info{
+        padding: 5% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .pg-info h1{
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+    .order-now-btn{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .order-now-btn .one{
+        padding: 4px 8px;
+        font-size: .8em;
+    }
+    .order-now-btn .two{
+        font-size: .8em;
+    }
+    .keyboard-img picture img{
+        width: 100%;
+        border-radius: 1em;
+        height: auto;
+        max-height: 90%;
+        object-fit: cover;
+        border-radius: 1em 0 0 1em;
+    }
+    .orange-keyboard{
+        left: -10%;
+    }
+    .orange-keyboard::after{
+        height: 97.4%;
+        border-radius: 0 1em 1em 0;
+
+    }
+    .orange-keyboard img{
+        border-radius: 0 1em 1em 0 !important;
+    }
+    .orange-keyboard img,
+    .water-keyboard img{
+        width: 100%;
+        border-radius: 1em;
+        height: auto;
+        max-height: 50vw;
+        object-fit: cover;
+    }
+    .wireless-keyboard{
+        padding: 4rem 0 2rem 0;
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+         "one one"
+         "two two";
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+    }
+    .wireless-keyboard .title{
+        font-size: 1.5em;
+        line-height: 1.5rem;
+    }
+    .wireless-keyboard .title.one{
+        grid-area: one;
+    }
+    .wireless-keyboard .summary.two{
+        grid-area: two;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .keyboard-features{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "fone"
+        "ftwo"
+        "fthree"
+        "ffour";
+        grid-gap: 2rem;
+        padding-bottom: 10%;
+    }
+    .feature .icon{
+        margin-bottom: 5%;
+
+    }
+    .feature{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer{
+        padding-bottom: 5%;
+    }
+
+}
+
